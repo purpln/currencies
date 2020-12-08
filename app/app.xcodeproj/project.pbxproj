@@ -27,6 +27,7 @@
 		E45C5D2A256951C4009BC605 /* Presentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45C5D29256951C4009BC605 /* Presentor.swift */; };
 		E460369B256B5090007425DB /* appStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E460369A256B5090007425DB /* appStack.swift */; };
 		E46036A2256B5BD8007425DB /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46036A1256B5BD8007425DB /* TableViewCell.swift */; };
+		E47020CB257FB8FF0014D946 /* TableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47020CA257FB8FF0014D946 /* TableViewHeader.swift */; };
 		E4FCDACD256B148E0086F61D /* ViewControllerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FCDACC256B148E0086F61D /* ViewControllerHelper.swift */; };
 		E4FCDAD3256B14EC0086F61D /* appLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FCDAD2256B14EC0086F61D /* appLabel.swift */; };
 /* End PBXBuildFile section */
@@ -54,6 +55,7 @@
 		E45C5D29256951C4009BC605 /* Presentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentor.swift; sourceTree = "<group>"; };
 		E460369A256B5090007425DB /* appStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appStack.swift; sourceTree = "<group>"; };
 		E46036A1256B5BD8007425DB /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		E47020CA257FB8FF0014D946 /* TableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewHeader.swift; sourceTree = "<group>"; };
 		E4FCDACC256B148E0086F61D /* ViewControllerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerHelper.swift; sourceTree = "<group>"; };
 		E4FCDAD2256B14EC0086F61D /* appLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = appLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -205,6 +207,7 @@
 				E42632CE25669DC300879A5A /* ViewController.swift */,
 				E4FCDACC256B148E0086F61D /* ViewControllerHelper.swift */,
 				E46036A1256B5BD8007425DB /* TableViewCell.swift */,
+				E47020CA257FB8FF0014D946 /* TableViewHeader.swift */,
 				E4FCDAD2256B14EC0086F61D /* appLabel.swift */,
 				E460369A256B5090007425DB /* appStack.swift */,
 			);
@@ -286,6 +289,7 @@
 				E42632B925669BF600879A5A /* UIViewController.swift in Sources */,
 				E42632CF25669DC300879A5A /* ViewController.swift in Sources */,
 				E42632E52566A4F100879A5A /* Interactor.swift in Sources */,
+				E47020CB257FB8FF0014D946 /* TableViewHeader.swift in Sources */,
 				E42632BC25669C0600879A5A /* UINavigationController.swift in Sources */,
 				E460369B256B5090007425DB /* appStack.swift in Sources */,
 				E45C5D2A256951C4009BC605 /* Presentor.swift in Sources */,

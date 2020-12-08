@@ -9,17 +9,24 @@ import UIKit
 
 extension ViewController:UITableViewDataSource, UITableViewDelegate{
     func configure(){
+        configureButtons()
+        configureTableView()
         view.addSubviews(btcusdt, bnbbtc, ethbtc, tableView)
         view.backgroundColor = .systemBackground
-    }
-    
-    func configureButtons(){
+        
         btcusdt.anchors(top: view.safeTopAnchor, left: nil, bottom: nil, right: nil, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 50)
         bnbbtc.anchors(top: btcusdt.bottomAnchor, left: nil, bottom: nil, right: nil, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 50)
         ethbtc.anchors(top: bnbbtc.bottomAnchor, left: nil, bottom: nil, right: nil, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 50)
+        tableView.anchors(top: ethbtc.bottomAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
+    }
+    
+    func configureButtons(){
         btcusdt.setTitle(Currencies.btcusdt.rawValue, for: .normal)
         bnbbtc.setTitle(Currencies.bnbbtc.rawValue, for: .normal)
         ethbtc.setTitle(Currencies.ethbtc.rawValue, for: .normal)
+        btcusdt.setTitleColor(.label, for: .normal)
+        bnbbtc.setTitleColor(.label, for: .normal)
+        ethbtc.setTitleColor(.label, for: .normal)
         btcusdt.tag = 1
         bnbbtc.tag = 2
         ethbtc.tag = 3
@@ -34,8 +41,16 @@ extension ViewController:UITableViewDataSource, UITableViewDelegate{
         tableView.delegate = self
         tableView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         tableView.register(TableViewCell.self, forCellReuseIdentifier: constants.bidCell)
+        tableView.register(TableViewHeader.self, forHeaderFooterViewReuseIdentifier: "sectionHeader")
         tableView.separatorStyle = .none
-        //tableView.anchors(top: bnbbtc.bottomAnchor, left: vie, bottom: nil, right: nil, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: "sectionHeader") as! TableViewHeader
+        view.amountLabel.text = "Amount BTC"
+        view.priceLabel.text = "Price USD"
+        view.totalLabel.text = "Total"
+        return view
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -46,7 +46,6 @@ final class Interactor: NSObject{
     func reconnect(_ currency:Currencies){
         guard currency != savedCurrency else { return }
         savedCurrency = currency
-        print(currency.rawValue)
         webSocketTask?.cancel(with: .goingAway, reason: nil)
         session = URLSession(configuration: .default, delegate: self, delegateQueue: nil)
         webSocketTask = session.webSocketTask(with: URL(string: url + currency.rawValue + delay)!)
